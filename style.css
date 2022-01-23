@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding:0;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vid-container{
+    height: 100vh;
+    overflow: hidden;
+    border:1px solid red;
+}
+.vid-container video{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.filter-container{
+    position: fixed;
+    top: 25vh;
+    left: 2rem;
+    height: 45vh;
+    width:5rem;
+    z-index: 3;
+}
+.filter{
+    border:1px solid #ffffff;
+    width:100%;
+    height: calc(45vh/6);
+    background: url("/pep/CameraApp/Project/depositphotos_102157982-stock-photo-big-tree-in-green-field.jpg");
+    background-size: contain;
+    background-blend-mode: soft-light;
+}
+.filter-div{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top:0;
+}
+.zoom-container{
+    height: 7rem;
+    width: 3rem;
+    position: fixed;
+    right:1.5rem;
+    top:7rem;
+    z-index:3;
+}
+.zoom-container:hover{cursor: pointer;}
+.zoom-in,.zoom-out{
+    width:100%;
+    height: 3.5rem;
+    color:white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #2f3640;
+}
+.zoom-in:hover ,.zoom-out:hover{
+    background-color: #353635bb;
+}
+#record,#capture{
+    position:fixed;
+    right:1rem;
+    height: 4rem;
+    width:4rem;
+    border:none;
+    border-radius: 50%;
+    background: transparent;
+    border:.35rem solid #ffffff;
+    z-index: 3;
+}
+#record:hover,#capture:hover{
+    cursor: pointer;
+}
+#record{
+    top:40vh;
+}
+#capture{
+    top:50vh;
+}
+.inner-btn{
+    border:none;
+    border-radius: 50%;
+    width: 85%;
+    height: 70%;
+    margin:auto;
+}
+.vid-animate{
+    animation: blink infinite 1s; 
+}
+.cap-animate{
+    animation: blink 1s;
+}
+.red{background: red;}
+.white{background: white;}
+@keyframes blink{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.2);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+#gallery{
+    position: fixed;
+    z-index: 3;
+    right: 2rem;
+    height: 5rem;
+    width: 5rem;
+    bottom: 8rem;
+}
